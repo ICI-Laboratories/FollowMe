@@ -19,7 +19,7 @@ def login_screen():
     col1, col2, col3 = st.columns([1, 2, 1])
     
     with col2:
-        st.image("https://via.placeholder.com/150", width=150)
+        st.image("https://via.placeholder.com/150", width=150)  # Replace with your logo
         st.title("Daily Activity Tracker")
         st.subheader("Your AI-powered personal assistant")
         
@@ -40,8 +40,11 @@ def get_user_info():
     if not st.experimental_user.is_logged_in:
         return None
     
-    return {
+    # Only include attributes that exist in st.experimental_user
+    user_info = {
         "name": st.experimental_user.name,
-        "email": st.experimental_user.email,
-        "id": st.experimental_user.id
+        "email": st.experimental_user.email
     }
+    
+    # We'll use email as a unique identifier since id isn't available
+    return user_info

@@ -2,6 +2,13 @@ import streamlit as st
 import os
 from utils.auth_utils import login_screen, get_user_info
 
+# Print available attributes for debugging
+# Uncomment this to see what attributes are available
+# if st.experimental_user.is_logged_in:
+#     for attr in dir(st.experimental_user):
+#         if not attr.startswith('_'):
+#             print(f"Attribute: {attr}, Value: {getattr(st.experimental_user, attr)}")
+
 # Configure page settings
 st.set_page_config(
     page_title="Daily Activity Tracker",
