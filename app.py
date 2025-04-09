@@ -104,8 +104,3 @@ else:
         st.markdown("---")
         st.button("🚪 Log out", on_click=st.logout, key="logout_button")
     
-    # Footer
-    st.markdown(
-        "<div class='footer'>Daily Activity Tracker © 2025 | Your data stays local</div>",
-        unsafe_allow_html=True
-    )
